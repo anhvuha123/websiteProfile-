@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sản phẩm Áo Đồ của ABC</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<header>
+  <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='64' viewBox='0 0 240 64'><rect rx='8' width='240' height='64' fill='%23ffffff'/><text x='18' y='42' font-family='Segoe UI,Arial' font-weight='700' font-size='30' fill='%23ff5b2e'>ABC</text><text x='78' y='42' font-family='Segoe UI,Arial' font-weight='600' font-size='16' fill='%23033333'>Design</text></svg>" alt="Logo">
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="#">Giới thiệu</a>
+    <a href="products.html">Dịch vụ</a>
+  </nav>
+</header>
+
+<section class="products-section">
+    <h2>CÁC SẢN PHẨM THỜI TRANG NỔI BẬT</h2>
+
+    <div class="product-grid">
+        
+        <div class="product-card" data-product="product-a">
+            <div class="product-image">
+                <img src="img/áo1.jpg" alt="Áo Sơ Mi">
+            </div>
+            <i class="fa-solid fa-shirt"></i>
+            <h3>Sản Phẩm A - Áo thun</h3>
+            <p>thông tin cụt thể về sản phẩm, thông tin cụt thể về sản phẩm, thông tin cụt thể về sản phẩm,</p>
+            <a href="#" class="btn btn-sm view-detail-btn">Xem chi tiết</a>
+        </div>
+
+        <div class="product-card" data-product="product-b">
+            <div class="product-image">
+                <img src="img/áo4.jpg" alt="Quần Jeans">
+            </div>
+            <i class="fa-solid fa-bag-shopping"></i>
+            <h3>Sản Phẩm B - áo thun </h3>
+            <p>thông tin cụt thể về sản phẩm, thông tin cụt thể về sản phẩm, thông tin cụt thể về sản phẩm,</p>
+            <a href="#" class="btn btn-sm view-detail-btn">Xem chi tiết</a>
+        </div>
+
+        <div class="product-card" data-product="product-c">
+            <div class="product-image">
+                <img src="img/áo3.jpg" alt="Áo Khoác Dù">
+            </div>
+            <i class="fa-solid fa-jacket"></i>
+            <h3>Sản Phẩm C - Áo thun</h3>
+            <p>thông tin cụt thể về sản phẩm, thông tin cụt thể về sản phẩm, thông tin cụt thể về sản phẩm,</p>
+            <a href="#" class="btn btn-sm view-detail-btn">Xem chi tiết</a>
+        </div>
+
+        <div class="product-card" data-product="product-d">
+            <div class="product-image">
+                <img src="img/áo5.jpg" alt="Váy Đầm Dự Tiệc">
+            </div>
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h3>Sản Phẩm D - áo thun phong cách trẻ trung</h3>
+            <p>thông tin cụt thể về sản phẩm, thông tin cụt thể về sản phẩm, thông tin cụt thể về sản phẩm,</p>
+            <a href="#" class="btn btn-sm view-detail-btn">Xem chi tiết</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+  © 2025 Công ty ABC — Website.
+</footer>
+
+<div class="modal-overlay" id="contact-modal">
+    <div class="modal-content">
+        <h3>HOTLINE HỖ TRỢ</h3>
+        <p>0901 234 567</p>
+        <button class="modal-btn" id="close-modal-btn">Đã Rõ</button>
+    </div>
+</div>
+<div class="fab-container">
+    <a href="#" class="contact-fab" id="open-modal-btn">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+</div>
+
+
+<div class="modal-overlay" id="product-detail-modal">
+    <div class="modal-content product-detail-content">
+        <span class="close-detail-btn">&times;</span>
+        <div id="product-detail-info">
+            <div id="detail-product-a" class="detail-content">
+                <img src="https://via.placeholder.com/400x450.png?text=Chi+Tiet+Ao+A" alt="Chi tiết Áo A">
+                <h3>Áo Sơ Mi Công Sở Cao Cấp</h3>
+                <p>Thông tin chi tiết: Sản phẩm A sử dụng vải Bamboo/Cotton tự nhiên, thấm hút mồ hôi tốt, chống nhăn nhẹ, thiết kế Slimfit tôn dáng. Có đủ size S, M, L, XL với 5 màu cơ bản (Trắng, Xanh nhạt, Hồng phấn, Be, Xám).</p>
+                <p class="price">Giá: 450.000 VNĐ</p>
+            </div>
+            
+            <div id="detail-product-b" class="detail-content" style="display:none;">
+                <img src="https://via.placeholder.com/400x450.png?text=Chi+Tiet+Quan+B" alt="Chi tiết Quần B">
+                <h3>Quần Jeans Thời Trang</h3>
+                <p>Thông tin chi tiết: Quần jeans co giãn 4 chiều, chất liệu denim cao cấp, bền màu sau nhiều lần giặt. Phom regular fit thoải mái. Cam kết 1 đổi 1 trong 7 ngày nếu lỗi sản xuất.</p>
+                <p class="price">Giá: 790.000 VNĐ</p>
+            </div>
+            
+           
+            <a href="tel:0901234567" class="btn btn-dark">Tư vấn ngay</a>
+        </div>
+    </div>
+</div>
+
+<script>
+    // JS CHO MODAL HỘI THOẠI (0901 234 567)
+    const openModalBtn = document.getElementById('open-modal-btn');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const contactModal = document.getElementById('contact-modal');
+    
+    openModalBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        contactModal.classList.add('active');
+    });
+
+    closeModalBtn.addEventListener('click', () => {
+        contactModal.classList.remove('active');
+    });
+
+    contactModal.addEventListener('click', (e) => {
+        if (e.target === contactModal) {
+            contactModal.classList.remove('active');
+        }
+    });
+
+    // ===========================================
+    // JS MỚI CHO MODAL CHI TIẾT SẢN PHẨM
+    // ===========================================
+
+    const viewDetailBtns = document.querySelectorAll('.view-detail-btn');
+    const detailModal = document.getElementById('product-detail-modal');
+    const closeDetailBtn = document.querySelector('.close-detail-btn');
+    const detailContents = document.querySelectorAll('.detail-content');
+
+    viewDetailBtns.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const productKey = button.closest('.product-card').dataset.product;
+            
+            // 1. Ẩn tất cả nội dung chi tiết
+            detailContents.forEach(content => {
+                content.style.display = 'none';
+            });
+
+            // 2. Hiển thị nội dung chi tiết của sản phẩm hiện tại
+            const targetContent = document.getElementById('detail-' + productKey);
+            if (targetContent) {
+                targetContent.style.display = 'block';
+            }
+
+            // 3. Hiển thị Modal
+            detailModal.classList.add('active');
+        });
+    });
+
+    // Đóng Modal chi tiết khi click nút X
+    closeDetailBtn.addEventListener('click', () => {
+        detailModal.classList.remove('active');
+    });
+
+    // Đóng Modal chi tiết khi click bên ngoài
+    detailModal.addEventListener('click', (e) => {
+        if (e.target === detailModal) {
+            detailModal.classList.remove('active');
+        }
+    });
+
+</script>
+
+</body>
+</html>

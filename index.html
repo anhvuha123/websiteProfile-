@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thông Tin Doanh Nghiệp</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div class="modal-overlay" id="contact-modal">
+    <div class="modal-content">
+        <h3>HOTLINE HỖ TRỢ</h3>
+        <p>0901 234 567</p>
+        <button class="modal-btn" id="close-modal-btn">Đã Rõ</button>
+    </div>
+</div>
+
+<div class="fab-container">
+    <a href="#" class="contact-fab" id="open-modal-btn">
+        <i class="fa-solid fa-phone"></i>
+    </a>
+</div>
+
+<script>
+    const openModalBtn = document.getElementById('open-modal-btn');
+    const closeModalBtn = document.getElementById('close-modal-btn');
+    const contactModal = document.getElementById('contact-modal');
+    
+    // Ngăn chặn hành động mặc định của link khi click vào nút FAB
+    openModalBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        contactModal.classList.add('active');
+    });
+
+    // Sự kiện đóng Modal khi bấm nút "Đã Rõ"
+    closeModalBtn.addEventListener('click', () => {
+        contactModal.classList.remove('active');
+    });
+
+    // Sự kiện đóng Modal khi click bên ngoài khu vực nội dung
+    contactModal.addEventListener('click', (e) => {
+        if (e.target === contactModal) {
+            contactModal.classList.remove('active');
+        }
+    });
+</script>
+
+</script>
+<header>
+  <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='64' viewBox='0 0 240 64'><rect rx='8' width='240' height='64' fill='%23ffffff'/><text x='18' y='42' font-family='Segoe UI,Arial' font-weight='700' font-size='30' fill='%23ff5b2e'>ABC</text><text x='78' y='42' font-family='Segoe UI,Arial' font-weight='600' font-size='16' fill='%23033333'>Design</text></svg>" alt="Logo">
+  <nav>
+    <a href="index.html">Trang chủ</a>
+    <a href="#">Giới thiệu</a>
+    <a href="products.html">Dịch vụ</a>
+  </nav>
+</header>
+
+
+<section class="hero">
+  <div class="bg-shape"></div>
+
+  <div class="hero-left">
+    <h1>GIỚI THIỆU<br><span>TÊN CỦA DOANH NGHIỆP</span></h1>
+    <div class="info-box">
+      <p><i class="fa-solid fa-user"></i> Đại diện: <b>Nguyễn Văn A</b></p>
+      <p><i class="fa-solid fa-building"></i> Công Ty: <b>TNHH ABC</b></p>
+      <p><i class="fa-solid fa-phone"></i> SĐT: <b>0901 234 567</b></p>
+      <p><i class="fa-solid fa-envelope"></i> Email: <b>contact@abc.com</b></p>
+      <p><i class="fa-solid fa-location-dot"></i> Địa chỉ: <b>123 Nguyễn Huệ, Đà Nẵng</b></p>
+    </div>
+
+    <div class="btn-group">
+      <a href="products.html" class="btn">Xem Sản phẩm</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <img src="img/bia.jpg" alt="Ảnh doanh nghiệp">
+  </div>
+</section>
+
+<footer>
+  © 2025 Công ty ABC — Website.
+</footer>
+
+</body>
+</html>
