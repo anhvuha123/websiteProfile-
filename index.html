@@ -3,18 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Thông Tin Doanh Nghiệp</title>
+  <title>DUY LE Designer</title>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="img/logoicon.png" type="image/png">
 </head>
 
 <body>
 
 <div class="modal-overlay" id="contact-modal">
     <div class="modal-content">
-        <h3>HOTLINE HỖ TRỢ</h3>
-        <p>0935919033</p>
-        <button class="modal-btn" id="close-modal-btn">Đã Rõ</button>
+        <h3>Please call</h3>
+        <p>0935 919 033</p>
+        <button class="modal-btn" id="close-modal-btn">OK</button>
     </div>
 </div>
 
@@ -51,13 +52,26 @@
 </script>
 <header>
   <img src="img/blacklogo.jpg" alt="Logo">
-  <nav>
-    <a href="index.html">Trang chủ</a>
-    <a href="#">Giới thiệu</a>
-    <a href="products.html">Dịch vụ</a>
+  <nav style="margin-right: 100px;">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="#" id="show-detail" >Contact</a>
   </nav>
 </header>
 
+<div class="modal-overlay" id="intro-detail-modal">
+    <div class="modal-content">
+        <span class="close-intro-btn", style="margin-left: 990px">
+            <img src="img/dấu x.png" alt="Đóng" style="width: 35px;">
+        </span>
+        <h3>Please contact with other platforms</h3>
+        <p>Information</p>
+        <p>TikTok: <a href="https://facebook.com">contact@abc.com</a></p>
+        <p>Facebook: <a href="https://www.facebook.com/le.duy.984/about?locale=vi_VN" target="_blank">https://www.facebook.com</a></p>
+        <p>Instagram: <a href="https://instagram.com" target="_blank">instagram.com</a></p>
+    </div>
+    </div>
+</div>
 
 <section class="hero">
   <div class="bg-shape"></div>
@@ -82,8 +96,31 @@
 </section>
 
 <footer>
-  © 2025 Công ty ABC — Website.
+  © 2025 Developer — Website.
 </footer>
+
+<script>
+  const showIntroBtn = document.getElementById('show-detail');
+  const introModal = document.getElementById('intro-detail-modal');
+  const closeIntroBtn = document.querySelector('.close-intro-btn');
+
+  showIntroBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      introModal.classList.add('active'); // bật modal
+  });
+
+  closeIntroBtn.addEventListener('click', () => {
+      introModal.classList.remove('active'); // tắt modal
+  });
+
+  // Click ra ngoài modal cũng đóng
+  introModal.addEventListener('click', (e) => {
+      if (e.target === introModal) {
+          introModal.classList.remove('active');
+      }
+  });
+</script>
+
 
 </body>
 </html>

@@ -23,8 +23,8 @@ header {
 }
 
 header img {
-  height: 65px;
-  padding-left: 150px;
+  height: 70px;
+  padding-left: 180px;
 }
 
 nav a {
@@ -32,7 +32,7 @@ nav a {
   color: #f0ebeb;
   text-decoration: none;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 nav a:hover {
@@ -116,6 +116,7 @@ footer {
   color: #fff;
   display: inline-block;
   transition: 0.2s;
+  
 }
 
 .btn:hover {
@@ -378,3 +379,4 @@ footer {
         margin-top: 35px;
     }
 }
+
